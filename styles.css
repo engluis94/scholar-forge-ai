@@ -1,0 +1,815 @@
+/* ===================================================
+SCHOLAR FORGE AI
+Modern Website Stylesheet
+Version 2026
+=================================================== */
+
+:root{
+
+```
+--primary:#2563eb;
+--primary-dark:#1d4ed8;
+
+--secondary:#0f172a;
+
+--background:#f8fafc;
+
+--surface:#ffffff;
+
+--text:#1f2937;
+
+--text-light:#64748b;
+
+--border:#e2e8f0;
+
+--success:#16a34a;
+
+--shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+--radius:16px;
+```
+
+}
+
+/* ===================================================
+RESET
+=================================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+```
+font-family:
+Inter,
+"Segoe UI",
+Roboto,
+Arial,
+sans-serif;
+
+background:var(--background);
+
+color:var(--text);
+
+line-height:1.8;
+
+overflow-x:hidden;
+```
+
+}
+
+/* ===================================================
+TYPOGRAPHY
+=================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+```
+color:var(--secondary);
+
+font-weight:700;
+
+line-height:1.3;
+```
+
+}
+
+h1{
+font-size:3.5rem;
+}
+
+h2{
+font-size:2.2rem;
+margin-bottom:25px;
+}
+
+h3{
+font-size:1.35rem;
+}
+
+p{
+margin-bottom:18px;
+}
+
+a{
+text-decoration:none;
+transition:.3s;
+}
+
+/* ===================================================
+CONTAINER
+=================================================== */
+
+.container{
+
+```
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
+```
+
+}
+
+/* ===================================================
+NAVBAR
+=================================================== */
+
+.navbar{
+
+```
+position:sticky;
+
+top:0;
+
+z-index:999;
+
+backdrop-filter:blur(12px);
+
+background:
+rgba(15,23,42,.95);
+
+box-shadow:
+0 4px 20px rgba(0,0,0,.1);
+```
+
+}
+
+.nav-container{
+
+```
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 0;
+```
+
+}
+
+.logo{
+
+```
+color:white;
+
+font-size:1.4rem;
+
+font-weight:800;
+
+letter-spacing:.5px;
+```
+
+}
+
+.menu{
+
+```
+display:flex;
+
+gap:28px;
+```
+
+}
+
+.menu a{
+
+```
+color:white;
+
+font-weight:500;
+```
+
+}
+
+.menu a:hover{
+
+```
+color:#93c5fd;
+```
+
+}
+
+/* ===================================================
+HERO
+=================================================== */
+
+.hero{
+
+```
+background:
+linear-gradient(
+    135deg,
+    #0f172a,
+    #1e40af
+);
+
+color:white;
+
+text-align:center;
+
+padding:120px 20px;
+```
+
+}
+
+.hero h1{
+
+```
+color:white;
+
+max-width:900px;
+
+margin:auto auto 25px;
+```
+
+}
+
+.hero p{
+
+```
+max-width:850px;
+
+margin:auto;
+
+font-size:1.15rem;
+
+opacity:.95;
+```
+
+}
+
+.hero-buttons{
+
+```
+margin-top:40px;
+```
+
+}
+
+/* ===================================================
+BUTTONS
+=================================================== */
+
+.btn,
+.btn-primary,
+.btn-secondary{
+
+```
+display:inline-block;
+
+padding:14px 28px;
+
+border-radius:10px;
+
+font-weight:600;
+
+transition:.3s;
+```
+
+}
+
+.btn-primary{
+
+```
+background:white;
+
+color:var(--primary);
+```
+
+}
+
+.btn-primary:hover{
+
+```
+transform:translateY(-3px);
+
+box-shadow:var(--shadow);
+```
+
+}
+
+.btn-secondary{
+
+```
+border:2px solid white;
+
+color:white;
+```
+
+}
+
+.btn-secondary:hover{
+
+```
+background:white;
+
+color:var(--primary);
+```
+
+}
+
+/* ===================================================
+SECTIONS
+=================================================== */
+
+.section{
+
+```
+padding:90px 0;
+```
+
+}
+
+.bg-light{
+
+```
+background:#f1f5f9;
+```
+
+}
+
+/* ===================================================
+CARDS
+=================================================== */
+
+.cards{
+
+```
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+```
+
+}
+
+.card{
+
+```
+background:var(--surface);
+
+border-radius:var(--radius);
+
+padding:30px;
+
+box-shadow:var(--shadow);
+
+transition:.3s;
+```
+
+}
+
+.card:hover{
+
+```
+transform:translateY(-6px);
+```
+
+}
+
+.card h3{
+
+```
+margin-bottom:15px;
+```
+
+}
+
+/* ===================================================
+BENEFITS
+=================================================== */
+
+.benefits{
+
+```
+max-width:850px;
+
+margin:auto;
+```
+
+}
+
+.benefits li{
+
+```
+list-style:none;
+
+margin-bottom:18px;
+
+font-size:1.1rem;
+```
+
+}
+
+/* ===================================================
+FAQ
+=================================================== */
+
+.faq-item{
+
+```
+background:white;
+
+padding:25px;
+
+border-radius:var(--radius);
+
+margin-bottom:20px;
+
+box-shadow:var(--shadow);
+```
+
+}
+
+.faq-item h3{
+
+```
+margin-bottom:10px;
+```
+
+}
+
+/* ===================================================
+SUPPORT BOX
+=================================================== */
+
+.support-box{
+
+```
+background:white;
+
+max-width:700px;
+
+margin:auto;
+
+text-align:center;
+
+padding:40px;
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow);
+```
+
+}
+
+.support-box h3{
+
+```
+margin-bottom:15px;
+```
+
+}
+
+/* ===================================================
+LEGAL PAGES
+=================================================== */
+
+.legal{
+
+```
+background:white;
+
+margin:50px auto;
+
+padding:50px;
+
+border-radius:20px;
+
+box-shadow:var(--shadow);
+```
+
+}
+
+.legal h1{
+
+```
+margin-bottom:20px;
+```
+
+}
+
+.legal h2{
+
+```
+margin-top:35px;
+```
+
+}
+
+.legal ul{
+
+```
+padding-left:25px;
+```
+
+}
+
+.legal li{
+
+```
+margin-bottom:10px;
+```
+
+}
+
+.back{
+
+```
+display:inline-block;
+
+margin-top:30px;
+
+background:var(--primary);
+
+color:white;
+
+padding:12px 24px;
+
+border-radius:10px;
+```
+
+}
+
+.back:hover{
+
+```
+background:var(--primary-dark);
+```
+
+}
+
+/* ===================================================
+TABLES
+=================================================== */
+
+table{
+
+```
+width:100%;
+
+border-collapse:collapse;
+
+margin:25px 0;
+```
+
+}
+
+th,
+td{
+
+```
+border:1px solid var(--border);
+
+padding:12px;
+
+text-align:left;
+```
+
+}
+
+th{
+
+```
+background:#f1f5f9;
+```
+
+}
+
+/* ===================================================
+FOOTER
+=================================================== */
+
+footer{
+
+```
+background:var(--secondary);
+
+color:white;
+
+text-align:center;
+
+padding:50px 20px;
+```
+
+}
+
+.footer-content{
+
+```
+max-width:1000px;
+
+margin:auto;
+```
+
+}
+
+.footer-content h3{
+
+```
+color:white;
+
+margin-bottom:10px;
+```
+
+}
+
+.footer-links{
+
+```
+margin:20px 0;
+```
+
+}
+
+.footer-links a{
+
+```
+color:white;
+
+margin:0 12px;
+```
+
+}
+
+.footer-links a:hover{
+
+```
+color:#93c5fd;
+```
+
+}
+
+.copyright{
+
+```
+opacity:.8;
+
+margin-top:20px;
+```
+
+}
+
+/* ===================================================
+ANIMATIONS
+=================================================== */
+
+@keyframes fadeIn{
+
+```
+from{
+    opacity:0;
+    transform:translateY(20px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+```
+
+}
+
+.hero,
+.card,
+.faq-item,
+.support-box{
+
+```
+animation:
+fadeIn .8s ease;
+```
+
+}
+
+/* ===================================================
+SCROLLBAR
+=================================================== */
+
+::-webkit-scrollbar{
+
+```
+width:10px;
+```
+
+}
+
+::-webkit-scrollbar-track{
+
+```
+background:#e2e8f0;
+```
+
+}
+
+::-webkit-scrollbar-thumb{
+
+```
+background:#94a3b8;
+
+border-radius:20px;
+```
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+```
+background:#64748b;
+```
+
+}
+
+/* ===================================================
+RESPONSIVE
+=================================================== */
+
+@media(max-width:992px){
+
+```
+h1{
+    font-size:2.7rem;
+}
+
+h2{
+    font-size:1.8rem;
+}
+```
+
+}
+
+@media(max-width:768px){
+
+```
+.menu{
+    display:none;
+}
+
+.hero{
+
+    padding:90px 20px;
+}
+
+.hero h1{
+
+    font-size:2.1rem;
+}
+
+.hero p{
+
+    font-size:1rem;
+}
+
+.legal{
+
+    padding:25px;
+}
+
+.support-box{
+
+    padding:25px;
+}
+```
+
+}
+
+@media(max-width:480px){
+
+```
+h1{
+    font-size:1.8rem;
+}
+
+h2{
+    font-size:1.5rem;
+}
+
+.btn-primary,
+.btn-secondary{
+
+    width:100%;
+
+    margin-bottom:10px;
+}
+```
+
+}
