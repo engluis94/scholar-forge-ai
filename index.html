@@ -1,425 +1,76 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-```
-<title>Scholar Forge AI | Pesquisa Acadêmica com Inteligência Artificial</title>
-
-<meta name="description"
-    content="Scholar Forge AI é uma extensão inteligente para estudantes, pesquisadores e profissionais que desejam otimizar pesquisas, organizar referências e aumentar a produtividade acadêmica.">
-
-<meta name="keywords"
-    content="IA acadêmica, pesquisa científica, extensão chrome, inteligência artificial, produtividade acadêmica">
-
-<meta name="author" content="Scholar Forge AI">
-
-<link rel="icon" href="logo.png">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scholar Forge AI</title>
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        color: #1f2937;
-        background: #f8fafc;
-        line-height: 1.7;
-    }
-
-    .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: auto;
-    }
-
-    nav {
-        background: #0f172a;
-        position: sticky;
-        top: 0;
-        z-index: 999;
-    }
-
-    .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 18px 0;
-    }
-
-    .logo {
-        color: white;
-        font-size: 1.4rem;
-        font-weight: bold;
-    }
-
-    .menu a {
-        color: white;
-        text-decoration: none;
-        margin-left: 25px;
-        font-weight: 500;
-    }
-
-    .hero {
-        <img src="logo.png" alt="Scholar Forge AI Logo" class="site-logo">
-        background: linear-gradient(135deg, #0f172a, #1d4ed8);
-        color: white;
-        text-align: center;
-        padding: 120px 20px;
-    }
-
-    .hero h1 {
-        font-size: 3rem;
-        margin-bottom: 25px;
-    }
-
-    .hero p {
-        max-width: 850px;
-        margin: auto;
-        font-size: 1.15rem;
-    }
-
-    .hero-buttons {
-        margin-top: 40px;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 15px 30px;
-        margin: 8px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .btn-primary {
-        background: white;
-        color: #1d4ed8;
-    }
-
-    .btn-secondary {
-        background: transparent;
-        color: white;
-        border: 2px solid white;
-    }
-
-    section {
-        padding: 80px 0;
-    }
-
-    section h2 {
-        text-align: center;
-        margin-bottom: 40px;
-        font-size: 2rem;
-    }
-
-    .cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-        gap: 25px;
-    }
-
-    .card {
-        background: white;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 8px 25px rgba(0,0,0,.08);
-    }
-
-    .card h3 {
-        margin-bottom: 15px;
-    }
-
-    .about,
-    .benefits,
-    .faq {
-        background: white;
-    }
-
-    .benefits ul {
-        max-width: 800px;
-        margin: auto;
-        list-style: none;
-    }
-
-    .benefits li {
-        margin-bottom: 15px;
-        font-size: 1.1rem;
-    }
-
-    .faq-item {
-        background: #ffffff;
-        padding: 25px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 15px rgba(0,0,0,.05);
-    }
-
-    .faq-item h3 {
-        margin-bottom: 10px;
-    }
-
-    .support-box {
-        text-align: center;
-        background: white;
-        max-width: 600px;
-        margin: auto;
-        padding: 35px;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0,0,0,.08);
-    }
-
-    footer {
-        background: #0f172a;
-        color: white;
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    footer a {
-        color: white;
-        margin: 0 10px;
-        text-decoration: none;
-    }
-
-    .footer-links {
-        margin: 20px 0;
-    }
-
-    @media(max-width:768px) {
-
-        .hero h1 {
-            font-size: 2rem;
-        }
-
-        .menu {
-            display: none;
-        }
-    }
+:root{
+--purple:#7c3aed;--blue:#2563eb;--yellow:#facc15;--bg:#050816;--card:#0f172a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#050816,#0b1024);color:#fff}
+nav{position:sticky;top:0;background:rgba(5,8,22,.8);backdrop-filter:blur(12px);padding:18px 5%;display:flex;justify-content:space-between}
+nav a{color:white;text-decoration:none;margin-left:20px}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px}
+.hero h1{font-size:4rem;background:linear-gradient(90deg,var(--purple),var(--blue),var(--yellow));-webkit-background-clip:text;color:transparent}
+.hero p{max-width:900px;margin:20px auto;font-size:1.2rem;color:#cbd5e1}
+.btn{display:inline-block;padding:14px 28px;border-radius:12px;text-decoration:none;font-weight:bold;margin:8px}
+.primary{background:linear-gradient(90deg,var(--purple),var(--blue));color:white}
+.secondary{border:1px solid var(--yellow);color:var(--yellow)}
+section{padding:90px 8%}
+h2{text-align:center;font-size:2.4rem;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.card{background:rgba(15,23,42,.8);padding:24px;border-radius:20px;border:1px solid rgba(255,255,255,.08)}
+footer{text-align:center;padding:40px;background:#030712}
 </style>
-```
-
 </head>
-
 <body>
-
 <nav>
-
-```
-<div class="container nav-container">
-
-    <div class="logo">
-        Scholar Forge AI
-    </div>
-
-    <div class="menu">
-        <a href="#sobre">Sobre</a>
-        <a href="#recursos">Recursos</a>
-        <a href="#beneficios">Benefícios</a>
-        <a href="#faq">FAQ</a>
-        <a href="#suporte">Suporte</a>
-    </div>
-
+<div><strong>Scholar Forge AI</strong></div>
+<div>
+<a href="#sobre">Sobre</a>
+<a href="#recursos">Recursos</a>
+<a href="#faq">FAQ</a>
 </div>
-```
-
 </nav>
 
 <header class="hero">
-
-```
-<div class="container">
-
-    <h1>
-        Pesquisa Acadêmica Potencializada por Inteligência Artificial
-    </h1>
-
-    <p>
-        Scholar Forge AI foi criado para ajudar estudantes, pesquisadores,
-        professores e profissionais a produzir conteúdo acadêmico de forma
-        mais organizada, eficiente e produtiva.
-    </p>
-
-    <div class="hero-buttons">
-
-        <a href="privacy.html" class="btn btn-primary">
-            Política de Privacidade
-        </a>
-
-        <a href="terms.html" class="btn btn-secondary">
-            Termos de Serviço
-        </a>
-
-    </div>
-
+<div>
+<img src="logo.png" style="width:120px;margin-bottom:20px">
+<h1>O Futuro da Pesquisa Acadêmica</h1>
+<p>Plataforma inteligente para pesquisadores, estudantes e profissionais. Organize referências, acelere revisões bibliográficas e produza conhecimento com IA.</p>
+<a class="btn primary" href="privacy.html">Privacidade</a>
+<a class="btn secondary" href="terms.html">Termos</a>
 </div>
-```
-
 </header>
 
-<section id="sobre" class="about">
-
-```
-<div class="container">
-
-    <h2>Sobre o Scholar Forge AI</h2>
-
-    <p style="text-align:center;max-width:900px;margin:auto;">
-        O Scholar Forge AI é uma extensão desenvolvida para auxiliar atividades
-        acadêmicas, pesquisa científica, organização de conteúdo e produtividade.
-        Nosso objetivo é simplificar processos complexos e oferecer ferramentas
-        modernas que apoiem a criação e gestão do conhecimento.
-    </p>
-
-</div>
-```
-
+<section id="sobre">
+<h2>Sobre</h2>
+<p style="text-align:center;max-width:900px;margin:auto">Scholar Forge AI foi criado para transformar a forma como conhecimento é produzido, organizado e refinado.</p>
 </section>
 
 <section id="recursos">
-
-```
-<div class="container">
-
-    <h2>Recursos Principais</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Pesquisa Inteligente</h3>
-            <p>Organize informações e materiais de pesquisa de maneira eficiente.</p>
-        </div>
-
-        <div class="card">
-            <h3>Produtividade Acadêmica</h3>
-            <p>Automatize tarefas repetitivas e reduza o tempo gasto em processos manuais.</p>
-        </div>
-
-        <div class="card">
-            <h3>Organização de Conteúdo</h3>
-            <p>Mantenha textos, anotações e referências sempre estruturados.</p>
-        </div>
-
-        <div class="card">
-            <h3>Integração com IA</h3>
-            <p>Utilize recursos avançados de inteligência artificial para apoio à pesquisa.</p>
-        </div>
-
-    </div>
-
+<h2>Recursos</h2>
+<div class="grid">
+<div class="card"><h3>IA Acadêmica</h3><p>Assistência inteligente para escrita e pesquisa.</p></div>
+<div class="card"><h3>Referências</h3><p>Organização e apoio bibliográfico.</p></div>
+<div class="card"><h3>Produtividade</h3><p>Fluxos otimizados para pesquisadores.</p></div>
+<div class="card"><h3>Análise</h3><p>Extração e síntese de conhecimento.</p></div>
 </div>
-```
-
 </section>
 
-<section id="beneficios" class="benefits">
-
-```
-<div class="container">
-
-    <h2>Benefícios</h2>
-
-    <ul>
-        <li>✓ Maior produtividade acadêmica.</li>
-        <li>✓ Melhor organização de pesquisas.</li>
-        <li>✓ Fluxo de trabalho simplificado.</li>
-        <li>✓ Apoio à escrita e revisão de conteúdo.</li>
-        <li>✓ Ferramentas modernas para estudantes e pesquisadores.</li>
-    </ul>
-
+<section id="faq">
+<h2>Perguntas Frequentes</h2>
+<div class="grid">
+<div class="card"><h3>É gratuito?</h3><p>Possui recursos gratuitos e avançados.</p></div>
+<div class="card"><h3>Vende dados?</h3><p>Não comercializamos dados dos usuários.</p></div>
+<div class="card"><h3>Suporte?</h3><p>Contato: engluis94@gmail.com</p></div>
 </div>
-```
-
-</section>
-
-<section id="faq" class="faq">
-
-```
-<div class="container">
-
-    <h2>Perguntas Frequentes</h2>
-
-    <div class="faq-item">
-        <h3>O Scholar Forge AI é gratuito?</h3>
-        <p>Algumas funcionalidades podem ser gratuitas, enquanto recursos avançados poderão estar disponíveis em planos específicos.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3>Meus dados são vendidos?</h3>
-        <p>Não. O Scholar Forge AI não comercializa dados pessoais dos usuários.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3>Como solicitar suporte?</h3>
-        <p>Basta enviar um e-mail para o endereço de suporte informado abaixo.</p>
-    </div>
-
-</div>
-```
-
-</section>
-
-<section id="suporte">
-
-```
-<div class="container">
-
-    <h2>Suporte</h2>
-    <a href="support.html">Suporte</a>
-    <div class="support-box">
-
-        <h3>Contato Oficial</h3>
-
-        <p>
-            Para dúvidas, sugestões, questões relacionadas à privacidade ou suporte técnico:
-        </p>
-
-        <br>
-
-        <strong>
-            engluis94@gmail.com
-        </strong>
-
-    </div>
-
-</div>
-```
-
 </section>
 
 <footer>
-
-```
-<h3>Scholar Forge AI</h3>
-
-<p>Inteligência Artificial para Pesquisa e Produção Acadêmica.</p>
-
-<div class="footer-links">
-
-    <a href="privacy.html">Política de Privacidade</a>
-
-    <a href="terms.html">Termos de Serviço</a>
-
-    <a href="data-deletion.html">Exclusão de Dados</a>
-
-</div>
-
-<p>
-    © 2026 Scholar Forge AI. Todos os direitos reservados.
-</p>
-```
-
+<p>© 2026 Scholar Forge AI</p>
 </footer>
-
 </body>
 </html>
